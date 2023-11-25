@@ -1,2 +1,2 @@
 # AI
-Personal AI testbed a playground
+Personal AI testbed and playground
