@@ -58,12 +58,12 @@ class WaveNet(nn.Module):
         kernel_size: int
         vocab_size: int
         n_embd: int
-        causal: bool
+        causal: bool  # i don't think this really does anything... the convs are already causal
         _target_ = 'ai.models.nlp.wavenet.WaveNet'
 
     def __init__(self, config: Config):
-        c = config
         super().__init__()
+        c = config
         # self.LSTM = nn.GRU(input_size=input_size, hidden_size=64, num_layers=2, batch_first=True, bidirectional=True)
         self.emb = nn.Embedding(c.vocab_size, c.n_embd)
 

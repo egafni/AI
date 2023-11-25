@@ -101,9 +101,10 @@ class TrainNNConfig(ConfigMixin):
         default="wandb",
         metadata=dict(help="lightning logger to use", choices=["wandb", "csv", "tensorboard"]),
     )
-
+    resume: bool = False
     fit_ckpt_path: str | None = field(
-        default=None, metadata=dict(help="load trainer and model state from this checkpoint")
+        default=None, metadata=dict(help="load trainer and model state from this checkpoint. "
+                                         " set to 'best' to load best checkpoint")
     )
     predict: bool = field(default=False, metadata=dict(help="if True saves predictions to output folder"))
     matmul_precision: Literal["highest", "high", "medium"] = "high"
@@ -133,6 +134,8 @@ class TrainNNConfig(ConfigMixin):
             logger: Logger = WandbLogger(
                 name=name,
                 project=project,
+                id=name.replace('/', '__'),
+                resume='must' if self.resume else 'never'
                 # entity="",
             )
             logger.experiment.config.update(self.to_dict())  # type: ignore[attr-defined]

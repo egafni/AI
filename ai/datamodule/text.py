@@ -76,7 +76,7 @@ class TextDataModule(LightningDataModule):
         logger.info("Creating datasets...")
 
     def train_dataloader(self):
-        return DataLoader(self.ds_train, batch_size=self.config.batch_size, num_workers=self.config.num_workers)
+        return DataLoader(self.ds_train, batch_size=self.config.batch_size, num_workers=self.config.num_workers, shuffle=True)
 
     def val_dataloader(self):
         return DataLoader(self.ds_val, batch_size=self.config.batch_size, num_workers=self.config.num_workers)

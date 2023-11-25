@@ -10,6 +10,8 @@ from torch import nn
 from torchmetrics import Metric
 
 from ai.models.nlp.mlp import MLP
+from ai.models.nlp.simple_lstm import SimpleLSTM
+from ai.models.nlp.transformer import Transformer
 from ai.models.nlp.wavenet import WaveNet
 
 MetricType = Metric | Mapping[str, nn.Module] | None
@@ -18,7 +20,7 @@ MetricType = Metric | Mapping[str, nn.Module] | None
 class NextToken(pl.LightningModule):
     @dataclass(kw_only=True)
     class Config(ConfigMixin):
-        model: MLP.Config | WaveNet.Config
+        model: MLP.Config | WaveNet.Config | SimpleLSTM.Config | Transformer.Config
         # ex: "torch.optim.AdamW"
         optimizer_class: str
         # ex: dict(weight_decay=1e-4, lr=1e-3)
@@ -46,9 +48,13 @@ class NextToken(pl.LightningModule):
         y_hat = self(x)
         # loss = nn.functional.cross_entropy(y_hat, y[:, -1])
         # loss = nn.functional.cross_entropy(y_hat[:, -1], y[:, -1])
-        b, t, c = y_hat.shape
-        loss = nn.functional.cross_entropy(y_hat.view(b * t, c), y.view(b * t))
-        # loss = nn.functional.cross_entropy(y_hat[:, -1], y[:, ])
+        if y_hat.ndim == 3:
+            b, t, c = y_hat.shape
+            # autoregressive prediction of next token
+            loss = nn.functional.cross_entropy(y_hat.view(b * t, c), y.view(b * t))
+        else:
+            # only predicted the next token
+            loss = nn.functional.cross_entropy(y_hat, y[:, -1])
 
         self.log(f"{stage}/loss", loss, on_epoch=True, prog_bar=True, add_dataloader_idx=False)
         return loss
