@@ -31,7 +31,6 @@ class NextToken(pl.LightningModule):
         scheduler_lightning_cfg: dict | None = None
 
         _target_: str = "ai.lightning_modules.next_token.NextToken"
-        unique_config_id: str = "Regressor"
 
     def __init__(self, config: Config):
         super().__init__()
@@ -47,8 +46,9 @@ class NextToken(pl.LightningModule):
         y_hat = self(x)
         # loss = nn.functional.cross_entropy(y_hat, y[:, -1])
         # loss = nn.functional.cross_entropy(y_hat[:, -1], y[:, -1])
-        b,t,c = y_hat.shape
-        loss = nn.functional.cross_entropy(y_hat.view(b*t, c), y.view(b*t))
+        b, t, c = y_hat.shape
+        loss = nn.functional.cross_entropy(y_hat.view(b * t, c), y.view(b * t))
+        # loss = nn.functional.cross_entropy(y_hat[:, -1], y[:, ])
 
         self.log(f"{stage}/loss", loss, on_epoch=True, prog_bar=True, add_dataloader_idx=False)
         return loss

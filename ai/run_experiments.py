@@ -20,6 +20,9 @@ n_hidden = 256
 batch_size = 64
 
 config = TrainNNConfig(
+    name='wavenet',
+    experiment_group='next_token',
+    unique_id='v1',
     datamodule=TextDataModule.Config(fname=fname, block_size=block_size, batch_size=batch_size, num_workers=0),
     trainer=TrainerConfig(
         accelerator='cpu',
@@ -28,7 +31,7 @@ config = TrainNNConfig(
     ),
     lightning_module=NextToken.Config(
         # model=MLP.Config(vocab_size=vocab_size, block_size=block_size, n_embd=n_embd, n_hidden=n_hidden, n_layers=4),
-        model=WaveNet.Config(vocab_size=vocab_size, kernel_size=3, n_embd=n_embd),
+        model=WaveNet.Config(vocab_size=vocab_size, kernel_size=3, n_embd=n_embd, causal=True),
         optimizer_class='torch.optim.AdamW',
         optimizer_init_params=dict(lr=lr),
     ),
@@ -41,10 +44,7 @@ config = TrainNNConfig(
         save_top_k=5,
         verbose=True,
     ),
-    name='wavenet',
-    experiment_group='next_token',
-    unique_id='exp_0',
-    logger='tensorboard'
+    logger='wandb'
 
 )
 train.train_model(config)
