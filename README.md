@@ -1,6 +1,16 @@
 # AI
 Personal AI testbed and playground
 
+to run experiments:
+```bash
+python afi/run_experiments.py -u v1
+```
+
+to run tests:
+```bash
+pytest
+```
+
 # Comparing Next Token Predictors
 ![WandB](images/wandb.png)
 
