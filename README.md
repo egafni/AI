@@ -1,5 +1,5 @@
 # AI
-Personal AI testbed and playground.  This is purely for personal experimentation and learning.
+Personal AI testbed and playground.
 
 to run experiments:
 ```bash
