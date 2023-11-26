@@ -142,7 +142,7 @@ class TrainNNConfig(ConfigMixin):
                 resume='allow'
                 # entity="",
             )
-            logger.experiment.config.update(self.to_dict(),allow_val_change=True)  # type: ignore[attr-defined]
+            logger.experiment.config.update(self.to_dict(), allow_val_change=True)  # type: ignore[attr-defined]
         elif self.logger == "tensorboard":
             logger = TensorBoardLogger(save_dir=f"{self.output_dir}/logs", name=name)
             # logger.experiment._get_file_writer().add_summary(self.to_dict().update(name="config"))
@@ -313,3 +313,10 @@ if __name__ == "__main__":
         )
     else:
         train_model(train_config)
+
+
+def plot_char_embeddings(embeddings: torch.Tensor, char_vocab):
+    """
+    Plot character embeddings
+    """
+
