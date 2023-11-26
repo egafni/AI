@@ -13,9 +13,8 @@ pytest
 
 # Comparing Next Token Predictors
 
-Various next token predictors (MLP, wavenet, lstm, transformer, etc).
-
 ![WandB](images/wandb.png)
+Various next token predictors (MLP, wavenet, lstm, transformer, etc).
 
 ```python
 from ai.train import TrainNNConfig
@@ -37,33 +36,50 @@ print(''.join(dm.ds_train.decode(g[0])))
 ```
 
 ```
-BOLINGHARISHON BOLING HENRY VI:
-The queen, as wish a tongue city.
+CLARENCE:
+Your lordship and dance sweet.
+Therefore me Doricle, master not cutcher enclaim
+To chose biins of mine execution,
+Who can they on, they would be seen of them:
+They do fear upon my soul promise of treasons,
+Whereins to have deserved and bear it.
 
-FRIAR LADURENCE:
-Come, one brital kind you mind your gosfending of curches,
-But which the was narrief is and his face;
-Be tuke and wrick eagly one dooe, and and fretune,
-Unto a daughneral that what our neature.. Do you no experse,
-Will revery eld not so.
+QUEEN MARGARET:
+Setting fill'd honour body on,
+That she's own nothing babe.
 
-SICINIUS:
-'God no vitly peace, and read will loadful thing no sons,
-That I would past you patience; yet her drops to of
-braise: but my strange, go! But fond my hath this niften draught,
-You hands not driwth a day.
+First Murderer:
+His, my dearer sorrow;
+But a while at our affairs rights of many so,
+Yet is; where's pilgrimage is well in the wedding of discourse;
+Until have wash'd at sea.
 
-AUTOLYCUS:
-What should Make men, and say that all detere times
-And fid is at thy stone arms. But thy soul shall well
-Capule in that smil hencember me in thy life,
-Can lively and brincew-blow Cown: whose implace him them wilt.
+CLIFFORD:
+O God's mother!
 
-Second Marcius,
-If thy commorderer coves the mine of Coriolanus,
-Liked whoscass should thy Kind 'day's patient
-To have frondly day a hope and king have.
-Her is ensived the poticle.
-Ah, all reclivers underm our case;
-And only hath his c
+NORFOLK:
+By heavy captain: there is the greatest and the duke
+That city a man that midst death. Bring children,
+Which is the fame of my full of the law,
+Lest my mooning dragon of my stitue,
+Which this stars is my bhost tale time best,
+The Edward that kill'd and slain.
+
+QUEEN MARGARET:
+O much devotion! why doth have been high gentle
+Can not take his business of small fight.
+Then he's ready stop: and pretty too;
+But you playfeit, she days are speaks, it is then and born.
+And took it of my steed, that lord!
+What should be gone that oppersition? have makest,
+Thy subjected have then so write sume Aboot,
+I was too pass'd at thy grace of my far,
+Until my happy wreport come against thy earth;
+But one honour'd to wail.
 ```
+
+## Positional Encodings (learned)
+![WandB](images/positional_encodings.png)
+
+## Attention Maps
+![WandB](images/attention_maps.png)
