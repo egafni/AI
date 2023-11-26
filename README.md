@@ -85,3 +85,6 @@ But one honour'd to wail.
 
 ## Attention Maps
 ![WandB](images/attention_maps.png)
+
+## Character embeddings
+![WandB](images/char_embeds.png)
