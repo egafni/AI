@@ -1,5 +1,5 @@
 # AI
-Personal AI testbed and playground
+Personal AI testbed and playground.  This is purely for personal experimentation and learning.
 
 to run experiments:
 ```bash
@@ -12,6 +12,9 @@ pytest
 ```
 
 # Comparing Next Token Predictors
+
+Various next token predictors (MLP, wavenet, lstm, transformer, etc).
+
 ![WandB](images/wandb.png)
 
 ```python
