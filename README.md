@@ -13,7 +13,9 @@ pytest
 
 # Comparing Next Token Predictors
 
-![WandB](images/wandb.png)
+train losses at step 1559:
+![WandB](images/legend.png)
+![WandB](images/loss_curves.png)
 Various next token predictors (MLP, wavenet, lstm, transformer, etc).
 
 ```python
