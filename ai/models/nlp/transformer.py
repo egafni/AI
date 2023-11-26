@@ -20,7 +20,6 @@ class Transformer(nn.Module):
         super().__init__()
         c = self.config = config
 
-
         self.token_embedding_table = nn.Embedding(c.vocab_size, c.n_embd)
         self.position_embedding_table = nn.Embedding(c.block_size, c.n_embd)
         self.blocks = nn.Sequential(
@@ -73,19 +72,22 @@ class AttentionHead(nn.Module):
 
         self.dropout = nn.Dropout(dropout)
 
+        self.last_attn_map = None
+
     def forward(self, x):
         T = x.shape[1]  # time dim
         mask = ~torch.tril(torch.ones(T, T).to(torch.bool)).to(x.device)  # causal mask
 
         # forward
         q, k, v = self.q(x), self.k(x), self.v(x)  # B,T,C
-        w = q @ k.transpose(-2, -1)  # B,T,C @ B,C,T = B,T,T
-        w = torch.masked_fill(w, mask, value=float('-inf'))
-        w = w * self.scale  # causal mask, normalize
-        w = torch.softmax(w, dim=-1)
-        w = self.dropout(w)
-        assert w.isnan().sum() == 0
-        x = w @ v  # B,T,T @ B,T,C = B,T,C
+        attn = q @ k.transpose(-2, -1)  # B,T,C @ B,C,T = B,T,T
+        attn = torch.masked_fill(attn, mask, value=float('-inf'))
+        attn = attn * self.scale  # causal mask, normalize
+        attn = torch.softmax(attn, dim=-1)
+        dattn = self.dropout(attn)
+        self.last_attn_map = dattn.detach().cpu().clone()
+        assert dattn.isnan().sum() == 0
+        x = dattn @ v  # B,T,T @ B,T,C = B,T,C
         return x
 
 

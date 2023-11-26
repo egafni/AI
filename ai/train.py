@@ -2,6 +2,7 @@
 Train an Neural Net model
 """
 import argparse
+import glob
 import json
 import os
 from dataclasses import dataclass, field
@@ -114,6 +115,9 @@ class TrainNNConfig(ConfigMixin):
         default=DEFAULT_EXPERIMENT_DIR, metadata=dict(help="output directory to store results in")
     )
 
+    def do_resume(self):
+        return self.resume or self.fit_ckpt_path is not None
+
     @property
     def output_dir(self):
         return os.path.join(self.base_output_dir, self.experiment_group, self.name, self.unique_id)
@@ -128,17 +132,17 @@ class TrainNNConfig(ConfigMixin):
             if "WANDB_API_KEY" not in os.environ:
                 raise OSError("WANDB_API_KEY env variable must be set if logger=wandb")
 
-            # note: init wandb early to capture all stdout/err
-            # if "WANDB_PROJECT_NAME" not in os.environ:
+            # note: init wandb early to capture all stdout/err for debugging remote jobs
             project = f"ai.{self.experiment_group}"
             logger: Logger = WandbLogger(
                 name=name,
                 project=project,
                 id=name.replace('/', '__'),
-                resume='must' if self.resume else 'never'
+                # resume='must' if self.resume else 'never',
+                resume='allow'
                 # entity="",
             )
-            logger.experiment.config.update(self.to_dict())  # type: ignore[attr-defined]
+            logger.experiment.config.update(self.to_dict(),allow_val_change=True)  # type: ignore[attr-defined]
         elif self.logger == "tensorboard":
             logger = TensorBoardLogger(save_dir=f"{self.output_dir}/logs", name=name)
             # logger.experiment._get_file_writer().add_summary(self.to_dict().update(name="config"))
@@ -153,6 +157,9 @@ class TrainNNConfig(ConfigMixin):
 
     def train(self, trial=None):
         return train_model(self, trial=trial)
+
+    def output_has_checkpoint(self):
+        return bool(glob.glob(f'{self.output_dir}/checkpoints/*.ckpt'))
 
 
 def train_model(config: TrainNNConfig, trial: optuna.Trial | None = None) -> dict[str, Any]:

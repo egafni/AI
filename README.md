@@ -32,7 +32,6 @@ with torch.inference_mode():
     y_hat = model(x)
     y_hat.shape
 
-# dm.train_dataloader.dat
 g = model.generate(x[:1,:], 500)
 print(''.join(dm.ds_train.decode(g[0])))
 ```

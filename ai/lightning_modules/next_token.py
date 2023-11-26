@@ -12,6 +12,7 @@ from torchmetrics import Metric
 from ai.models.nlp.mlp import MLP
 from ai.models.nlp.simple_lstm import SimpleLSTM
 from ai.models.nlp.transformer import Transformer
+from ai.models.nlp.transformer2 import Transformer2
 from ai.models.nlp.wavenet import WaveNet
 
 MetricType = Metric | Mapping[str, nn.Module] | None
@@ -20,7 +21,7 @@ MetricType = Metric | Mapping[str, nn.Module] | None
 class NextToken(pl.LightningModule):
     @dataclass(kw_only=True)
     class Config(ConfigMixin):
-        model: MLP.Config | WaveNet.Config | SimpleLSTM.Config | Transformer.Config
+        model: MLP.Config | WaveNet.Config | SimpleLSTM.Config | Transformer.Config | Transformer2.Config
         # ex: "torch.optim.AdamW"
         optimizer_class: str
         # ex: dict(weight_decay=1e-4, lr=1e-3)

@@ -16,7 +16,7 @@ from ai.train import TrainerConfig, TrainNNConfig
 def main(unique_id, resume):
     fname = f'{REPO_DIR}/data/shakespeare.txt'
     vocab_size = get_vocab_size(fname)
-    lr = 5e-4
+    lr = 2e-4
     n_embd = 256
     max_epochs = 10
 
@@ -33,9 +33,11 @@ def main(unique_id, resume):
     # batch_size = 32
     # model = SimpleLSTM.Config(vocab_size=vocab_size, n_embd=n_embd, hidden_size=256, num_layers=4)
 
-    block_size = 256
-    batch_size = 32
-    model = Transformer.Config(vocab_size=vocab_size, n_embd=n_embd, n_heads=4, n_blocks=4, dropout=.2,
+    block_size = 128
+    n_embd = 512
+    batch_size = 128
+    accumulate_grad_batches = 4
+    model = Transformer.Config(vocab_size=vocab_size, n_embd=n_embd, n_heads=16, n_blocks=16, dropout=0.2,
                                block_size=block_size)
 
     config = TrainNNConfig(
@@ -48,13 +50,14 @@ def main(unique_id, resume):
             max_epochs=max_epochs,
             val_check_interval=200,
             limit_val_batches=.05 if 'shakespeare' in fname else 1.0,
+            accumulate_grad_batches=4,
         ),
         lightning_module=NextToken.Config(
             model=model,
             optimizer_class='torch.optim.AdamW',
             optimizer_init_params=dict(lr=lr),
         ),
-        early_stopping=dict(monitor="val/loss", min_delta=0.00, patience=5, verbose=True, mode="min"),
+        early_stopping=dict(monitor="val/loss", min_delta=0.00, patience=25, verbose=True, mode="min"),
         model_checkpoint=dict(
             monitor="val/loss",
             mode="min",
@@ -64,7 +67,9 @@ def main(unique_id, resume):
             verbose=True,
         ),
         # resume=True,
-        # fit_ckpt_path='/mnt/ssd3/user/spock/projects/AI/experiments/next_token/WaveNet/shuffle_v2//checkpoints/epoch0__step2600.ckpt',
+        # fit_ckpt_path='/mnt/ssd3/user/spock/projects/AI/experiments/next_token/Transformer/v5//checkpoints/epoch0__step7250.ckpt',
+        # resume=True,
+        # fit_ckpt_path='last',
         logger='wandb'
 
     )
