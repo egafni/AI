@@ -29,9 +29,9 @@ model_class = config.lightning_module.get_target()
 model = model_class.load_from_checkpoint('/mnt/ssd3/user/spock/projects/AI/experiments/next_token/Transformer/v5//checkpoints/epoch0__step3600.ckpt')
 x,y = next(iter(dm.train_dataloader()))
 model = model.to('cpu')
-with torch.inference_mode():
-    y_hat = model(x)
-    y_hat.shape
+model.eval()
+y_hat = model(x)
+y_hat.shape
 
 g = model.generate(x[:1,:], 500)
 print(''.join(dm.ds_train.decode(g[0])))
@@ -85,3 +85,6 @@ But one honour'd to wail.
 
 ## Attention Maps
 ![WandB](images/attention_maps.png)
+
+## Character embeddings
+![WandB](images/char_embeds.png)
