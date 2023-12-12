@@ -6,7 +6,7 @@ from ai.constants import REPO_DIR
 # dm.prepare_data()
 # dm.train_data
 # X, y = next(iter(dm.train_dataloader()))
-from ai.datamodule.text import TextDataModule
+from ai.datamodules.text import TextDataModule
 from ai.lightning_modules.next_token import NextToken
 from ai.misc_utils import get_vocab_size
 from ai.models.nlp.transformer import Transformer

@@ -1,3 +1,5 @@
+notebooks/huggingface/peft-dialogue-summary-checkpoint-from-s3/
+notebooks/huggingface/imagespeft-dialogue-summary-checkpoint-from-s3/
 wandb
 .idea/
 # Byte-compiled / optimized / DLL files

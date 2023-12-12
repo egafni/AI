@@ -30,7 +30,7 @@ from pytorch_lightning.loggers.wandb import WandbLogger
 from pytorch_lightning.profilers import SimpleProfiler
 
 from ai.constants import DEFAULT_EXPERIMENT_DIR
-from ai.datamodule.text import TextDataModule
+from ai.datamodules.text import TextDataModule
 from ai.lightning_modules.next_token import NextToken
 from ai.misc_utils import write_json_file, OptunaPruningCallback
 

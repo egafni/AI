@@ -62,7 +62,7 @@ class TextDataModule(LightningDataModule):
         block_size: int
         batch_size: int
         num_workers: int = 0
-        _target_: str = "ai.datamodule.text.TextDataModule"
+        _target_: str = "ai.datamodules.text.TextDataModule"
 
     def __init__(self, config: Config):
         super().__init__()
