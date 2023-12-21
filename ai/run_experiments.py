@@ -13,6 +13,10 @@ from ai.models.nlp.transformer import Transformer
 from ai.train import TrainerConfig, TrainNNConfig
 
 
+class Transformer3:
+    pass
+
+
 def main(unique_id, resume):
     fname = f'{REPO_DIR}/data/shakespeare.txt'
     vocab_size = get_vocab_size(fname)
@@ -33,11 +37,11 @@ def main(unique_id, resume):
     # batch_size = 32
     # model = SimpleLSTM.Config(vocab_size=vocab_size, n_embd=n_embd, hidden_size=256, num_layers=4)
 
-    block_size = 128
-    n_embd = 512
-    batch_size = 128
+    block_size = 64
+    n_embd = 128
+    batch_size = 32
     accumulate_grad_batches = 4
-    model = Transformer.Config(vocab_size=vocab_size, n_embd=n_embd, n_heads=16, n_blocks=16, dropout=0.2,
+    model = Transformer.Config(vocab_size=vocab_size, n_embd=n_embd, n_heads=16, n_blocks=4, dropout=0.2,
                                block_size=block_size)
 
     config = TrainNNConfig(

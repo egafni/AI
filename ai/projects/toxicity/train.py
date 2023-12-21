@@ -15,6 +15,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+import os
 import torch
 from datasets import load_dataset
 from torch.optim import Adam
@@ -64,18 +65,21 @@ class ScriptArguments:
 
     # NOTE: gpt2 models use Conv1D instead of Linear layers which are not yet supported in 8 bit mode
     # models like gpt-neo* models are more suitable.
-    model_name: Optional[str] = field(default="ybelkada/gpt-j-6b-sharded-bf16", metadata={"help": "the model name"})
-    log_with: Optional[str] = field(default=None, metadata={"help": "use 'wandb' to log with wandb"})
+    # "ybelkada/gpt-j-6b-sharded-bf16"
+    # 'distilgpt2'
+    experiment_name: str = field(metadata={"help": "the experiment name"})
+    model_name: Optional[str] = field(default='ericzzz/falcon-rw-1b-instruct-openorca', metadata={"help": "the model name"})
+    log_with: Optional[str] = field(default='wandb', metadata={"help": "use 'wandb' to log with wandb"})
     learning_rate: Optional[float] = field(default=(1.47e-5) * 2, metadata={"help": "the learning rate"})
     mini_batch_size: Optional[int] = field(default=4, metadata={"help": "the PPO minibatch size"})
     batch_size: Optional[int] = field(default=16, metadata={"help": "the batch size"})
     gradient_accumulation_steps: Optional[int] = field(
         default=1, metadata={"help": "the number of gradient accumulation steps"}
     )
-    model_save_path: Optional[str] = field(
-        default="./gpt-j-6B-detoxified-long-context-26-shl-1e4-final",
-        metadata={"help": "the path to save the model"},
-    )
+
+    @property
+    def model_save_path(self):
+        return f"output/{self.model_name}/{self.experiment_name}"
 
 
 parser = HfArgumentParser(ScriptArguments)
@@ -159,7 +163,8 @@ model = AutoModelForCausalLM.from_pretrained(config.model_name, torch_dtype=torc
 model = AutoModelForCausalLMWithValueHead.from_pretrained(model)
 
 # We create a reference model by sharing 20 layers
-ref_model = create_reference_model(model, num_shared_layers=20)
+# ref_model = create_reference_model(model, num_shared_layers=20)
+ref_model = create_reference_model(model)
 
 # We make sure to use `Adam` optimizer on the model parameters that require gradients.
 optimizer = Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=config.learning_rate)
@@ -207,6 +212,7 @@ output_length_sampler = LengthSampler(output_min_length, output_max_length)
 model_save_path = script_args.model_save_path
 
 for epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
+    print(f'starting epoch {epoch}')
     query_tensors = batch["input_ids"]
 
     # Get response from the policy model
@@ -232,7 +238,10 @@ for epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     stats = ppo_trainer.step(query_tensors, response_tensors, rewards)
     ppo_trainer.log_stats(stats, batch, rewards)
 
+
+
     # Save model every 100 epochs
-    if epoch % 100 == 0:
+    if epoch % 5 == 0:
         if ppo_trainer.accelerator.is_main_process:
+            os.makedirs(f'{model_save_path}/{epoch}', exist_ok=True)
             ppo_trainer.save_pretrained(model_save_path)

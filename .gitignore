@@ -1,5 +1,8 @@
 notebooks/huggingface/peft-dialogue-summary-checkpoint-from-s3/
 notebooks/huggingface/imagespeft-dialogue-summary-checkpoint-from-s3/
+ai/projects/toxicity/gpt-j-6B-detoxified-long-context-26-shl-1e4-final/
+ai/projects/toxicity/output/
+*.csv
 wandb
 .idea/
 # Byte-compiled / optimized / DLL files
