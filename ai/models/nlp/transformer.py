@@ -57,40 +57,6 @@ class Transformer(nn.Module):
         return logits
 
 
-class AttentionHead(nn.Module):
-    def __init__(self, n_channels, head_size, dropout):
-        super().__init__()
-        C, H = n_channels, head_size
-
-        self.H = H
-
-        self.q = nn.Linear(C, H, bias=False)
-        self.k = nn.Linear(C, H, bias=False)
-        self.v = nn.Linear(C, H, bias=False)
-
-        self.register_buffer('scale', torch.tensor(H ** -0.5))
-
-        self.dropout = nn.Dropout(dropout)
-
-        self.last_attn_map = None
-
-    def forward(self, x):
-        T = x.shape[1]  # time dim
-        mask = ~torch.tril(torch.ones(T, T).to(torch.bool)).to(x.device)  # causal mask
-
-        # forward
-        q, k, v = self.q(x), self.k(x), self.v(x)  # B,T,C
-        attn = q @ k.transpose(-2, -1)  # B,T,C @ B,C,T = B,T,T
-        attn = torch.masked_fill(attn, mask, value=float('-inf'))
-        attn = attn * self.scale  # causal mask, normalize
-        attn = torch.softmax(attn, dim=-1)
-        dattn = self.dropout(attn)
-        self.last_attn_map = dattn.detach().cpu().clone()
-        assert dattn.isnan().sum() == 0
-        x = dattn @ v  # B,T,T @ B,T,C = B,T,C
-        return x
-
-
 class AttentionHeads(nn.Module):
     def __init__(self, n_channels, n_heads, dropout):
         super().__init__()

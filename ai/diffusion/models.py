@@ -1,5 +1,5 @@
 from torch import nn
-from wandb.wandb_torch import torch
+import torch
 
 from ai.diffusion.diffusion_utilities import ResidualConvBlock, UnetDown, EmbedFC, UnetUp
 
