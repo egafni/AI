@@ -90,14 +90,14 @@ class AttentionHeads(nn.Module):
         k = k.view(B, T, self.n_heads, self.head_size).transpose(1, 2)  # B, nh, T, hs
         v = v.view(B, T, self.n_heads, self.head_size).transpose(1, 2)  # B, nh, T, hs
 
-        attn = q @ k.transpose(-2, -1)  # B,N,T,C @ B,N,C,T = B,N,T,T
+        attn = q @ k.transpose(-2, -1)  # B,nh,T,C @ B,N,C,T = B,nh,T,T
         attn = torch.masked_fill(attn, mask, value=float('-inf'))
         attn = attn * self.scale  # causal mask, normalize
         attn = torch.softmax(attn, dim=-1)
         dattn = self.dropout(attn)
         self.last_attn_map = dattn.detach().cpu().clone()
         assert dattn.isnan().sum() == 0
-        x = dattn @ v  # B,nh,T,T @ B,N,T,hs = B,nh,T,hs
+        x = dattn @ v  # B,nh,T,T @ B,nh,T,hs = B,nh,T,hs
 
         x = x.transpose(1, 2).contiguous()  # B,T,nh,hs
         x = x.view(B, T, C)  # B,T,C
