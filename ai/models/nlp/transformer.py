@@ -11,8 +11,8 @@ class Transformer(nn.Module):
         vocab_size: int
         block_size: int
         n_embd: int
-        n_heads: int
-        n_blocks: int
+        n_head: int
+        n_layer: int
         dropout: float
         _target_ = 'ai.models.nlp.transformer.Transformer'
 
@@ -23,15 +23,15 @@ class Transformer(nn.Module):
         self.token_embedding_table = nn.Embedding(c.vocab_size, c.n_embd)
         self.position_embedding_table = nn.Embedding(c.block_size, c.n_embd)
         self.blocks = nn.Sequential(
-            *[TransformerBlock(n_heads=c.n_heads, n_embd=c.n_embd, in_channels=c.n_embd, dropout=c.dropout)
-              for i in range(c.n_blocks)]
+            *[TransformerBlock(n_heads=c.n_head, n_embd=c.n_embd, in_channels=c.n_embd, dropout=c.dropout)
+              for i in range(c.n_layer)]
         )
         self.ln_final = nn.LayerNorm(c.n_embd)
         self.project = nn.Linear(c.n_embd, c.vocab_size)
 
         self.register_buffer('positions', torch.arange(c.block_size))
 
-    def forward(self, x) -> (torch.Tensor, torch.Tensor):
+    def forward(self, x, y=None) -> (torch.Tensor, torch.Tensor):
         c = self.config
         B, T, C, H, V = x.shape[0], c.block_size, c.n_embd, c.n_embd, c.vocab_size
         assert x.shape == (B, T)
@@ -54,7 +54,12 @@ class Transformer(nn.Module):
         assert x.shape == (B, T, V)
 
         logits = x
-        return logits
+
+        if y is None:
+            return logits[:, -1], None
+        else:
+            loss = nn.functional.cross_entropy(logits.view(B * T, self.config.vocab_size), y.view(B * T))
+            return logits, loss
 
 
 class AttentionHeads(nn.Module):
@@ -101,6 +106,7 @@ class AttentionHeads(nn.Module):
 
         x = x.transpose(1, 2).contiguous()  # B,T,nh,hs
         x = x.view(B, T, C)  # B,T,C
+
         return x
 
 

@@ -11,7 +11,7 @@ scipy = "^1.11.3"
 numpy = "^1.26.2"
 matplotlib = "^3.8.1"
 #cupy-cuda11x = "^12.2.0"
-torch = "^2"
+torch = {url = "https://download.pytorch.org/whl/cu118/torch-2.2.0%2Bcu118-cp310-cp310-linux_x86_64.whl"}
 pandas = "^2.1.3"
 torchinfo = "^1.8.0"
 pytorch-lightning = "^2.1.2"
@@ -26,11 +26,13 @@ scikit-learn = "^1.3.2"
 seaborn = "^0.13.0"
 shutils = "^0.1.0"
 anthropic = "^0.8.0"
-torchvision = "^0.16.2"
+torchvision = "^0.17"
 peft = "^0.8.1"
 datasets = "^2.16.1"
 evaluate = "^0.4.1"
 seqeval = "^1.2.2"
+sacrebleu = "^2.4.0"
+torchtext = "^0.17.0"
 
 
 [tool.poetry.group.dev.dependencies]
