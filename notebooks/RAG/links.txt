@@ -1,0 +1,260 @@
+Home Page	https://twelvelabs.io/	no	Internal
+Main menu	https://twelvelabs.io/technology	no	Internal
+Main menu	https://twelvelabs.io/product	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/introduction	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/introduction	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/platform-overview	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/quickstart	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/manage-your-plan	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/playground-manage-indexes	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/playground-upload-manage-videos	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/playground-search	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/playground-classify	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/playground-generate-text-from-video	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/playground-examples	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/authentication	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/create-indexes	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/upload-videos	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/upload-from-local-file-system	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/upload-from-url	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/upload-from-external-providers	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/upload-cloud	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/search	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/query-engineering	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/search-single-queries	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/search-combined-queries	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/classifying-videos	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/classify-all-videos-within-an-index	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/generate-text-from-video	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/generate-titles-topics-hashtags	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/generate-summaries-chapters-highlights	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/generate-open-ended-texts	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/provide-video-data	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/provide-transcriptions-local-file-system	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/provide-transcriptions-from-urls	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/provide-transcriptions-cloud-to-cloud-transfers	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/provide-custom-metadata	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/extract-video-data	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/extract-video-data-transcriptions	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/extract-video-data-ocr	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/extract-video-data-logos	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/extract-video-data-thumbnails	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/webhooks	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/webhooks-manage	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/webhooks-requirements-for-processing-notifications	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/webhooks-notification-schema	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/multimodal-language-models	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/video-understanding-engines	yes	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/engine-options	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/search-options	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/conversation-option	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/pagination	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/pagination-indexes-and-tasks	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/pagination-search	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/pagination-content-classification	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/sorting	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/sorting-indexes-and-tasks	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/sorting-search-results	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/filtering	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/filtering-indexes-and-tasks	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/filtering-search-results	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/filtering-content-classification	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/grouping-and-ungrouping	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/release-notes	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/frequently-asked-questions	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/frequently-asked-questions#general-questions	no	Internal
+Guides v1.2	https://docs.twelvelabs.io/v1.2/docs/frequently-asked-questions#generate-api-suite	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/introduction	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/platform-overview	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/quickstart	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/manage-your-plan	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/playground	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/playground-manage-indexes	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/playground-upload-manage-videos	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/playground-search	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/playground-classify	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/playground-examples	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/authentication	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/create-indexes	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/upload-videos	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/upload-from-local-file-system	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/upload-from-url	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/upload-from-external-providers	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/upload-cloud	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/search	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/query-engineering	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/search-single-queries	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/search-combined-queries	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/content-classification	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/classifying-videos	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/classify-all-videos-within-an-index	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/provide-video-data	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/provide-transcriptions-local-file-system	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/provide-transcriptions-from-urls	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/provide-transcriptions-cloud-to-cloud-transfers	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/provide-custom-metadata	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/extract-video-data	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/extract-video-data-transcriptions	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/extract-video-data-ocr	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/extract-video-data-logos	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/extract-video-data-thumbnails	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/webhooks	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/webhooks-manage	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/webhooks-requirements-for-processing-notifications	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/webhooks-notification-schema	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/multimodal-language-models	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/video-understanding-engine	yes	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/indexing-options	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/search-options	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/conversation-option	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/pagination	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/pagination-indexes-and-tasks	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/pagination-search	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/pagination-content-classification	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/sorting	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/sorting-indexes-and-tasks	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/sorting-search-results	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/filtering	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/filtering-indexes-and-tasks	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/filtering-search-results	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/filtering-content-classification	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/grouping-and-ungrouping	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/release-notes	no	Internal
+Guides v1.1.2	https://docs.twelvelabs.io/docs/frequently-asked-questions	no	Internal
+Recipes API Docs v1.1.2	https://docs.twelvelabs.io/recipes/create-an-index-1	no	Internal
+Recipes API Docs v1.1.2	https://docs.twelvelabs.io/recipes/upload-a-video-1	no	Internal
+Recipes API Docs v1.1.2	https://docs.twelvelabs.io/recipes/make-a-search-request	no	Internal
+Recipes API Docs v1.1.2	https://docs.twelvelabs.io/recipes/make-a-classification-request-1	no	Internal
+Recipes API Docs v1.1.2	https://docs.twelvelabs.io/recipes/make-a-search-request	no	Internal
+Recipes API Docs v1.1.2	https://docs.twelvelabs.io/recipes	no	Internal
+Recipes API Docs v1.2	https://docs.twelvelabs.io/v1.2/recipes	no	Internal
+Recipes API Docs v1.2	https://docs.twelvelabs.io/v1.2/recipes/make-a-search-request	no	Internal
+Recipes API Docs v1.2	https://docs.twelvelabs.io/v1.2/recipes/create-an-index-1	no	Internal
+Recipes API Docs v1.2	https://docs.twelvelabs.io/v1.2/recipes/upload-a-video-1	no	Internal
+Recipes API Docs v1.2	https://docs.twelvelabs.io/v1.2/recipes/make-a-search-request	no	Internal
+Recipes API Docs v1.2	https://docs.twelvelabs.io/v1.2/recipes/make-a-classification-request-1	no	Internal
+Recipes API Docs v1.2	https://docs.twelvelabs.io/v1.2/recipes/generate-text-from-video	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/api-reference	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/engines	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/the-engine-object	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/list-engines	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/retrieve-engine	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/tasks	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/the-task-object	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/create-video-indexing-task	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/list-video-indexing-tasks	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/retrieve-video-indexing-task	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/delete-video-indexing-task	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/video-indexing-tasks-by-status	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/upload-external-provider	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/tasks-transfers	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/cloud-to-cloud-transfer	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/indexes	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/the-index-object	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/create-index	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/list-indexes	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/retrieve-index	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/update-index	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/delete-index	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/indexes-videos	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/the-video-object	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/list-videos	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/retrieve-video-information	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/update-video-information	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/delete-video-information	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/retrieve-transcription	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/retrieve-ocr	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/identify-logos	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/retrieve-thumbnail	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/performing-searches	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/make-search-request	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/search-retrieve-specific-page	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/combined-search	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/combined-queries-make-search-request	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/combined-queries-retrieve-specific-page	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/classify	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/classify-videos	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/classify-bulk	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/classify-retrieve-specific-page	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/generate-text-from-video-2	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/generate-gist	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/summarize	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/generate-text-representation	no	Internal
+API Reference v1.2	https://docs.twelvelabs.io/v1.2/reference/error-codes	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/api-reference	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/engines	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/the-engine-object	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/list-engines	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/retrieve-engine	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/tasks	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/the-task-object	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/create-video-indexing-task	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/list-video-indexing-tasks	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/retrieve-video-indexing-task	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/delete-video-indexing-task	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/video-indexing-tasks-by-status	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/tasks-transfers	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/cloud-to-cloud-transfer	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/indexes	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/the-index-object	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/create-index	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/list-indexes	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/retrieve-index	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/update-index	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/delete-index	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/indexes-videos	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/the-video-object	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/list-videos	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/retrieve-video-information	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/update-video-information	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/delete-video-information	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/retrieve-transcription	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/retrieve-ocr	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/identify-logos	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/retrieve-thumbnail	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/performing-searches	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/make-search-request	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/search-retrieve-specific-page	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/combined-search	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/combined-queries-make-search-request	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/combined-queries-retrieve-specific-page	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/classify	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/classify-videos	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/classify-bulk	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/classify-retrieve-specific-page	no	Internal
+API Reference v1.1.2	https://docs.twelvelabs.io/reference/error-codes	no	Internal
+About	https://twelvelabs.io/company	yes	Internal
+Blog	https://app.twelvelabs.io/blog/a-tour-of-video-understanding-use-cases	yes	Internal
+Blog	https://app.twelvelabs.io/blog/introducing-pegasus-1	yes	Internal
+Blog	https://app.twelvelabs.io/blog/multimodal-embeddings	yes	Internal
+Blog	https://app.twelvelabs.io/blog/what-is-multimodal-ai	yes	Internal
+Blog	https://app.twelvelabs.io/blog/the-past-present-and-future-of-video-understanding-applications	yes	Internal
+Blog	https://app.twelvelabs.io/blog/what-makes-foundation-models-special	yes	Internal
+Blog	https://app.twelvelabs.io/blog/foundation-models-are-going-multimodal	yes	Internal
+Blog	https://app.twelvelabs.io/blog/introducing-the-multimodal-ai-23labs-hackathon	yes	Internal
+Blog	https://app.twelvelabs.io/blog/twelve-labs-and-voxel51	yes	Internal
+Blog	https://app.twelvelabs.io/blog/twelve-labs-and-aperture-data	yes	Internal
+Blog	https://app.twelvelabs.io/blog/why-i-joined-twelve-labs-as-the-chief-scientist	no	Internal
+Blog	https://app.twelvelabs.io/blog/to-make-the-worlds-videos-searchable-twelve-labs-raises-5m	yes	Internal
+Blog	https://app.twelvelabs.io/blog/how-a-tiny-startup-beat-the-tech-giants-of-the-world-and-ranked-1-in-video-search-part-1-motivation	yes	Internal
+Blog	https://app.twelvelabs.io/blog/nvidia-hopper-gpus-expand-reach-as-demand-for-ai-grows	no	Internal
+Blog	https://app.twelvelabs.io/blog/twelve-labs-named-to-fast-companys-most-innovative-companies-of-2023	no	Internal
+Blog	https://app.twelvelabs.io/blog/twelve-labs-lands-12m-for-ai-that-understands-the-context-of-videos	no	Internal
+Blog	https://app.twelvelabs.io/blog/twelve-labs-introduces-new-api-playground-to-foster-video-search-innovation-and-adoption	no	Internal
+Blog	https://app.twelvelabs.io/blog/meet-the-latest-techstars-seattle-cohort-10-startups-on-how-theyve-adapted-to-the-pandemic	no	Internal
+Blog	https://app.twelvelabs.io/blog/companies-are-commercializing-multimodal-ai-models-to-analyze-videos-and-more	no	Internal
+Blog	https://app.twelvelabs.io/blog/ai-100-the-most-promising-artificial-intelligence-startups-of-2022	yes	Internal
+Blog	https://app.twelvelabs.io/blog/twelve-labs-makes-searching-inside-videos-simple-and-powerful-propelled-by-5m-seed-round	yes	Internal
+Blog	https://app.twelvelabs.io/blog/who-talked-about-us	yes	Internal
+Blog	https://app.twelvelabs.io/blog/perform-logo-detection-using-twelve-labs-api	no	Internal
+Blog	https://app.twelvelabs.io/blog/how-to-perform-video-ocr-using-twelve-labs-api	yes	Internal
+Blog	https://app.twelvelabs.io/blog/effortless-video-classifiers-with-twelve-labs-api-no-ml-training-required	yes	Internal
+Blog	https://app.twelvelabs.io/blog/search-by-combining-queries-with-twelve-labs-api	yes	Internal
+Blog	https://app.twelvelabs.io/blog/find-specific-moments-within-your-video-using-twelve-labs-simple-search-api	yes	Internal
+Pricing	https://app.twelvelabs.io/pricing	yes	Internal
+Terms	https://twelvelabs.io/terms-of-use	no	Internal
+Privacy	https://twelvelabs.io/privacy	no	Internal
+Media	https://www.intelcapital.com/investing-in-twelve-labs-building-the-most-powerful-video-understanding-infrastructure/	no	External
+Media	https://www.samsungnext.com/blog/why-we-invested-in-twelvelabs	no	External
+Media	https://www.kedglobal.com/artificial-intelligence/newsView/ked202310240018	no	External
+Blog	https://www.twelvelabs.io/blog/introducing-marengo-2-6		
