@@ -1,7 +1,9 @@
 notebooks/RAG/docs.llamaindex.ai
+notebooks/VQVAE/data/MNIST/raw
 notebooks/Gradient Checkpointing
 *weights*
 notebooks/*data/*
+notebooks/diffusion_math/exps/
 notebooks/huggingface/peft-dialogue-summary-checkpoint-from-s3/
 notebooks/huggingface/imagespeft-dialogue-summary-checkpoint-from-s3/
 ai/projects/toxicity/gpt-j-6B-detoxified-long-context-26-shl-1e4-final/

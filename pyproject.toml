@@ -45,6 +45,7 @@ jax = "^0.4.26"
 optax = "^0.2.2"
 score-models = {git = "https://github.com/ericmjl/score-models"}
 equinox = "^0.11.3"
+ipywidgets = "^8.1.2"
 
 
 [tool.poetry.group.dev.dependencies]
